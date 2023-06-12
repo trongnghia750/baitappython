@@ -1,0 +1,37 @@
+import pandas as pd
+import numpy as np
+excel_file = 'D:\phan_tich_du_lieu_python\THPTQG_Full.xlsx'
+df = pd.read_excel(excel_file)
+print(df)
+
+# In 10 dòng đầu tiên của cột 'Toán'
+print(df['Toán'].head(10))
+# In 10 dòng cuối cùng của cột 'Toán'
+print(df['Toán'].tail(10))
+# Trả về một cột của DataFrame
+data = df['Lý']
+print(data)
+# Trả về 2 cột của dataframe
+data = df[['Văn','Sinh']]
+print(data)
+# lấy dữ liệu ở hàng thứ 6
+data = df.loc[6]
+print(data)
+# Lấy dữ liệu của cột thứ 4
+data = df.iloc[:,3]
+print(data)
+# lọc theo điều kiện
+data = df[ df['Hoá'] > 2 ]
+print(data)
+
+data = df[df['GDCD'] >= 8]
+print(data)
+
+
+
+
+
+
+
+
+
